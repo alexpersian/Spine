@@ -92,16 +92,16 @@ class ViewController: UIViewController {
     }
     
     func moveVisualizer() {
-        UIView.animate(withDuration: 9.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
-            let newWhiteRect = CGRect(x: self.whiteWaveform.frame.minX - 300, y: self.whiteWaveform.frame.minY, width: self.whiteWaveform.frame.width, height: self.whiteWaveform.frame.height)
-            let newOrangeRect = CGRect(x: self.orangeWaveform.frame.minX - 300, y: self.orangeWaveform.frame.minY, width: self.orangeWaveform.frame.width, height: self.orangeWaveform.frame.height)
+        UIView.animate(withDuration: 60.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            let newWhiteRect = CGRect(x: self.whiteWaveform.frame.minX - self.whiteWaveform.frame.width, y: self.whiteWaveform.frame.minY, width: self.whiteWaveform.frame.width, height: self.whiteWaveform.frame.height)
+            let newOrangeRect = CGRect(x: self.orangeWaveform.frame.minX - self.orangeWaveform.frame.width, y: self.orangeWaveform.frame.minY, width: self.orangeWaveform.frame.width, height: self.orangeWaveform.frame.height)
             self.whiteWaveform.frame = newWhiteRect
             self.orangeWaveform.frame = newOrangeRect
         }, completion: nil)
         
-        UIView.animate(withDuration: 9.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
-            let newWhiteRect = CGRect(x: self.obscuredEmoji.frame.minX - 500, y: self.obscuredEmoji.frame.minY, width: self.obscuredEmoji.frame.width, height: self.obscuredEmoji.frame.height)
-            let newOrangeRect = CGRect(x: self.finalEmoji.frame.minX - 500, y: self.finalEmoji.frame.minY, width: self.finalEmoji.frame.width, height: self.finalEmoji.frame.height)
+        UIView.animate(withDuration: 30.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            let newWhiteRect = CGRect(x: self.obscuredEmoji.frame.minX - self.obscuredEmoji.frame.width, y: self.obscuredEmoji.frame.minY, width: self.obscuredEmoji.frame.width, height: self.obscuredEmoji.frame.height)
+            let newOrangeRect = CGRect(x: self.finalEmoji.frame.minX - self.obscuredEmoji.frame.width, y: self.finalEmoji.frame.minY, width: self.finalEmoji.frame.width, height: self.finalEmoji.frame.height)
             self.obscuredEmoji.frame = newWhiteRect
             self.finalEmoji.frame = newOrangeRect
         }, completion: nil)

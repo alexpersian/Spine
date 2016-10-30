@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		EA4645E31DC640D50011805A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4645E21DC640D50011805A /* AudioManager.swift */; };
-		EA4645E51DC642D40011805A /* harry-potter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645E41DC642D40011805A /* harry-potter.mp3 */; };
+		EA4645E51DC642D40011805A /* harry-potter1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645E41DC642D40011805A /* harry-potter1.mp3 */; };
 		EA4645EC1DC64B8E0011805A /* segment1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645E71DC64B8E0011805A /* segment1.mp3 */; };
 		EA4645ED1DC64B8E0011805A /* segment2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645E81DC64B8E0011805A /* segment2.mp3 */; };
 		EA4645EE1DC64B8E0011805A /* segment3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645E91DC64B8E0011805A /* segment3.mp3 */; };
 		EA4645EF1DC64B8E0011805A /* segment4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645EA1DC64B8E0011805A /* segment4.mp3 */; };
 		EA4645F01DC64B8E0011805A /* segment5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645EB1DC64B8E0011805A /* segment5.mp3 */; };
+		EA4645F21DC65A290011805A /* harry-potter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA4645F11DC65A290011805A /* harry-potter.mp3 */; };
 		EA56655B1DC4FBDF00FFAA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56655A1DC4FBDF00FFAA6B /* AppDelegate.swift */; };
 		EA56655D1DC4FBDF00FFAA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56655C1DC4FBDF00FFAA6B /* ViewController.swift */; };
 		EA5665601DC4FBDF00FFAA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA56655E1DC4FBDF00FFAA6B /* Main.storyboard */; };
@@ -27,12 +28,13 @@
 
 /* Begin PBXFileReference section */
 		EA4645E21DC640D50011805A /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		EA4645E41DC642D40011805A /* harry-potter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "harry-potter.mp3"; sourceTree = "<group>"; };
+		EA4645E41DC642D40011805A /* harry-potter1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "harry-potter1.mp3"; sourceTree = "<group>"; };
 		EA4645E71DC64B8E0011805A /* segment1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = segment1.mp3; sourceTree = "<group>"; };
 		EA4645E81DC64B8E0011805A /* segment2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = segment2.mp3; sourceTree = "<group>"; };
 		EA4645E91DC64B8E0011805A /* segment3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = segment3.mp3; sourceTree = "<group>"; };
 		EA4645EA1DC64B8E0011805A /* segment4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = segment4.mp3; sourceTree = "<group>"; };
 		EA4645EB1DC64B8E0011805A /* segment5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = segment5.mp3; sourceTree = "<group>"; };
+		EA4645F11DC65A290011805A /* harry-potter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "harry-potter.mp3"; sourceTree = "<group>"; };
 		EA5665571DC4FBDF00FFAA6B /* Spine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA56655A1DC4FBDF00FFAA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA56655C1DC4FBDF00FFAA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +99,8 @@
 				EA5665611DC4FBDF00FFAA6B /* Assets.xcassets */,
 				EA5665631DC4FBDF00FFAA6B /* LaunchScreen.storyboard */,
 				EA4645E61DC64B7E0011805A /* Audio */,
-				EA4645E41DC642D40011805A /* harry-potter.mp3 */,
+				EA4645E41DC642D40011805A /* harry-potter1.mp3 */,
+				EA4645F11DC65A290011805A /* harry-potter.mp3 */,
 				EA5665661DC4FBDF00FFAA6B /* Info.plist */,
 			);
 			path = Spine;
@@ -179,8 +182,9 @@
 				EA5665651DC4FBDF00FFAA6B /* LaunchScreen.storyboard in Resources */,
 				EA5665621DC4FBDF00FFAA6B /* Assets.xcassets in Resources */,
 				EA5665601DC4FBDF00FFAA6B /* Main.storyboard in Resources */,
+				EA4645F21DC65A290011805A /* harry-potter.mp3 in Resources */,
 				EA4645F01DC64B8E0011805A /* segment5.mp3 in Resources */,
-				EA4645E51DC642D40011805A /* harry-potter.mp3 in Resources */,
+				EA4645E51DC642D40011805A /* harry-potter1.mp3 in Resources */,
 				EA4645ED1DC64B8E0011805A /* segment2.mp3 in Resources */,
 				EA4645EE1DC64B8E0011805A /* segment3.mp3 in Resources */,
 			);
