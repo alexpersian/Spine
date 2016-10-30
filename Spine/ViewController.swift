@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -18,9 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var emojiDrawer: UIView!
     @IBOutlet weak var emojiDrawerHeight: NSLayoutConstraint!
     @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var whiteWaveform: UIImageView!
+    @IBOutlet weak var orangeWaveform: UIImageView!
+    @IBOutlet weak var obscuredEmoji: UIImageView!
+    @IBOutlet weak var finalEmoji: UIImageView!
     
     fileprivate let defaultDrawerHeight: CGFloat = 60
     fileprivate var bookData: AudioBook?
+    fileprivate var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +39,24 @@ class ViewController: UIViewController {
     }
     
     fileprivate func setup() {
-        
+        loadAudioFile()
+    }
+    
+    func loadAudioFile() {
+        let soundURL = NSURL(fileURLWithPath: Bundle.main.path(forResource: "harry-potter", ofType: "mp3")!)
+        try? audioPlayer = AVAudioPlayer(contentsOf: soundURL as URL)
+        audioPlayer.prepareToPlay()
     }
     
     @IBAction func playPausePressed(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            audioPlayer.stop()
+            sender.isSelected = false
+        } else {
+            audioPlayer.play()
+            sender.isSelected = true
+            moveVisualizer()
+        }
     }
 
     @IBAction func expandEmojiDrawer(_ sender: UIButton) {
@@ -72,10 +91,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func getBookData(title: String, author: String) {
-        let url = "https://bemyapp.herokuapp.com/book?title=Harry%20Potter%20and%20the%20Half-Blood%20Prince&author=J.K.%20Rowling"
-        let request = NetworkRequest(method: .GET, url: url, headers: nil)
-        let network = NetworkProvider()
+    func moveVisualizer() {
+        UIView.animate(withDuration: 9.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            let newWhiteRect = CGRect(x: self.whiteWaveform.frame.minX - 300, y: self.whiteWaveform.frame.minY, width: self.whiteWaveform.frame.width, height: self.whiteWaveform.frame.height)
+            let newOrangeRect = CGRect(x: self.orangeWaveform.frame.minX - 300, y: self.orangeWaveform.frame.minY, width: self.orangeWaveform.frame.width, height: self.orangeWaveform.frame.height)
+            self.whiteWaveform.frame = newWhiteRect
+            self.orangeWaveform.frame = newOrangeRect
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 9.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            let newWhiteRect = CGRect(x: self.obscuredEmoji.frame.minX - 500, y: self.obscuredEmoji.frame.minY, width: self.obscuredEmoji.frame.width, height: self.obscuredEmoji.frame.height)
+            let newOrangeRect = CGRect(x: self.finalEmoji.frame.minX - 500, y: self.finalEmoji.frame.minY, width: self.finalEmoji.frame.width, height: self.finalEmoji.frame.height)
+            self.obscuredEmoji.frame = newWhiteRect
+            self.finalEmoji.frame = newOrangeRect
+        }, completion: nil)
     }
 }
 

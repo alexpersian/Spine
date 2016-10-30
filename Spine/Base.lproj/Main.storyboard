@@ -100,10 +100,34 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform" translatesAutoresizingMaskIntoConstraints="NO" id="vZ4-71-nbx">
-                                        <rect key="frame" x="-165" y="329" width="1482" height="42"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vd2-6c-18b" userLabel="White Time">
+                                        <rect key="frame" x="144" y="135" width="231" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform" translatesAutoresizingMaskIntoConstraints="NO" id="vZ4-71-nbx">
+                                                <rect key="frame" x="-145" y="194" width="1482" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="obscured-emoji-stream" translatesAutoresizingMaskIntoConstraints="NO" id="xI2-Uy-cg3">
+                                                <rect key="frame" x="-145" y="7" width="1485" height="179"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTS-LW-blw" userLabel="Orange Time">
+                                        <rect key="frame" x="0.0" y="135" width="146" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform_ORANGE" translatesAutoresizingMaskIntoConstraints="NO" id="9Zv-iN-zhJ">
+                                                <rect key="frame" x="0.0" y="193" width="1482" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="final-emojis_HarryPotter" translatesAutoresizingMaskIntoConstraints="NO" id="7Dv-YM-cNB">
+                                                <rect key="frame" x="0.0" y="2" width="1493" height="183"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -321,7 +345,11 @@
                     <connections>
                         <outlet property="bookCover" destination="mAL-hs-b0h" id="Bmb-fo-dXb"/>
                         <outlet property="emojiDrawer" destination="gci-UI-LzI" id="SM0-cF-VcX"/>
+                        <outlet property="finalEmoji" destination="7Dv-YM-cNB" id="lUE-Th-sLB"/>
+                        <outlet property="obscuredEmoji" destination="xI2-Uy-cg3" id="esq-Af-wuG"/>
+                        <outlet property="orangeWaveform" destination="9Zv-iN-zhJ" id="1H9-qh-iHc"/>
                         <outlet property="playPauseButton" destination="ZZ9-du-CLS" id="CNn-lo-UfR"/>
+                        <outlet property="whiteWaveform" destination="vZ4-71-nbx" id="4DP-jP-dDB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -347,9 +375,12 @@
         <image name="chapter_dropdown" width="13" height="7"/>
         <image name="current_marker" width="3" height="11"/>
         <image name="faded_emojidrawer_scrim" width="377" height="66"/>
+        <image name="final-emojis_HarryPotter" width="1493" height="183"/>
+        <image name="obscured-emoji-stream" width="1485" height="179"/>
         <image name="play_button" width="42" height="47"/>
         <image name="progress_full_line" width="383" height="5"/>
         <image name="progress_full_line_orange" width="383" height="6"/>
         <image name="waveform" width="1482" height="42"/>
+        <image name="waveform_ORANGE" width="1482" height="42"/>
     </resources>
 </document>
